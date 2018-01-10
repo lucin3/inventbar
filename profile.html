@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Planposal</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/main.css" type="text/css" />
+	    <link rel="stylesheet" href="css/profile.css" type="text/css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  </head>
+
+  <body>
+  <div id="wrap">
+
+  <header>
+    <!--Logo-->
+        <!--<a class="logo" href="#home"><img href="images/community-edit-planposal.png">Planposal</a>-->
+<!--right section of the header of the page-->
+        <nav>
+          <input class="nav-toggle" id="nav-toggle" type="checkbox">
+          <label class="navicon" for="nav-toggle"><span class="navicon-bar"></span></label>
+          <ul class="nav-items">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#signup">Sign Up</a></li>
+            <li><a href="#login">Log In</a></li>
+          </ul>
+        </nav>
+      </header>
+
+
+
+          <div id="content">
+
+
+	<aside>
+    <!--left section bookmark side-->
+          <ul>
+            <li><a href="#" class="active">London</a></li>
+            <li><a href="#">Paris</a></li>
+            <li><a href="#">Tokyo</a></li>
+            <li><a href="#">Newyork</a></li>
+          </ul>
+        </aside>
+
+
+
+	 <section>
+    <div class="w3-container">
+    <h1><b>What Would Mommy Do?</b></h1>
+    </div>
+
+    <div class="w3-container">
+    <h3><b>Project Description</b></h3>
+    </div>
+
+
+    <div class="w3-container">
+    <h3><b>Estimated Delivery Day</b></h3>
+    <p id="delivery" style="margin: .5em auto;font-size:16px;display: block;color:gray ;"></p>
+    </div>
+
+    <!--bubble profile pictures for the roles-->
+    <div class="w3-container">
+    <h3><b>Roles</b></h3>
+    <figure class="bubbleprofile">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample14.jpg" alt="sq-sample14" />
+    <figcaption>
+     <h3>First</h3>
+     <h5>Developer</h5>
+    </figcaption>
+    </figure>
+    <figure class="bubbleprofile">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample14.jpg" alt="sq-sample14" />
+    <figcaption>
+     <h3>Second</h3>
+     <h5>Advertise</h5>
+    </figcaption>
+    </figure>
+    <figure class="bubbleprofile">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample14.jpg" alt="sq-sample14" />
+    <figcaption>
+     <h3>Three</h3>
+     <h5>QA</h5>
+    </figcaption>
+    </figure>
+    <figure class="bubbleprofile">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample14.jpg" alt="sq-sample14" />
+    <figcaption>
+     <h3>Four</h3>
+     <h5>Market</h5>
+    </figcaption>
+    </figure>
+  </div>
+
+
+    <!--END bubble profile pictures for the roles-->
+
+    <div class="w3-container">
+      <h3><b>Skills Needed</b></h3>
+    <p class="w3-wide">Photography</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:95%">95%</div>
+    </div>
+    <p class="w3-wide">Web Design</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:85%">85%</div>
+    </div>
+    <p class="w3-wide">Photoshop</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:80%">80%</div>
+    </div>
+    </div>
+
+    <div class="w3-container">
+      <h3><b>Resume</b></h3>
+    <button class="w3-button w3-light-grey w3-padding-large w3-section">
+      <i class="fa fa-download">Attachments</i>
+    </button>
+    </div>
+
+
+    <div class="w3-container">
+    <h3><b>Frequently Asked Questions(FAQs)</b></h3>
+    </div>
+
+        </section>
+
+</div>
+    <!--div for content-->
+	<footer>© Copyright 2016 MiaSeen</footer>
+
+</div><!--div for wrap-->
+
+	<!--JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.easing.1.3.js"></script>
+    <!--animate bubble image appear when we hover over a navigation item -->
+    <!--position it more to the left and more to the top using negative positioning-->
+    <script type="text/javascript">
+      $(function() {
+        $('#nav > div').hover(
+          function() {
+            var $this = $(this);
+            <!--fade in by changing its opacity to 1-->
+            $this.find('img').stop().animate({
+                'width': '199px',
+                'height': '199px',
+                'top': '-25px',
+                'left': '-25px',
+                'opacity': '1.0'
+              },
+              <!--“easeOutBack” easing effect comes from the jQuery Easing Plugin-->
+              500, 'easeOutBack',
+              function() {
+                <!--list element fade in when animation finishes-->
+                $(this).parent().find('ul').fadeIn(700);
+              });
+            <!--add the class “active” to first link element inside of the item div and the heading to change their appearance -->
+            $this.find('a:first,h2').addClass('active');
+          },
+
+          <!--when we leave the navigation item -->
+          <!--revert the actions and make the list and the bubble disappear again	-->
+          function() {
+            var $this = $(this);
+            $this.find('ul').fadeOut(500);
+            $this.find('img').stop().animate({
+              'width': '52px',
+              'height': '52px',
+              'top': '0px',
+              'left': '0px',
+              'opacity': '0.1'
+            }, 5000, 'easeOutBack');
+            <!--remove the active class from the icon element and the heading-->
+            $this.find('a:first,h2').removeClass('active');
+          }
+        );
+      });
+
+
+      // Set the date we're counting down to
+      var countDownDate = new Date("Aug 5, 2017 23:59:00");
+
+      // Update the count down every 1 second
+      var x = setInterval(function() {
+
+          // Get todays date and time
+          var now = new Date();
+
+          // Find the distance between now an the count down date
+          var distance = countDownDate - now;
+
+          // Time calculations for days, hours, minutes and seconds
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+          // Output the result in an element with id="delivery"
+          document.getElementById("delivery").innerHTML = days + "\n" +"DAYS REMAINING";
+
+          // If the count down is over, write some text
+          if (distance < 0) {
+              clearInterval(x);
+              document.getElementById("delivery").innerHTML = "DELIVERED";
+          }
+      }, 1000);
+
+    </script>
+
+  </body>
+
+</html>

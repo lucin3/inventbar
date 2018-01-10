@@ -1,0 +1,23 @@
+#Profile {
+  position: absolute;
+  margin: auto;
+  top: 20; right: 0; bottom: 20; left: 0;
+  width: 50px; height: 150px;
+  border-radius: 150px;
+}
+
+#Profile img {
+  border-radius: 150px;
+}
+
+#Profile span {
+  position: absolute;
+  bottom: -60px;
+  display: block;
+  width: 150px;
+  text-align: center;
+  font-family: 'Oswald';
+  color: #333;
+  font-size: 25px;
+}
+

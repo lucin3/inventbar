@@ -1,0 +1,214 @@
+   body{
+                font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+                background:none;
+				color: #58666e;
+            }
+
+ aside {
+        /*for fixed side bar*/
+        position: fixed;
+        top: 60px;
+        bottom: 0;
+        width: 200px; 
+        padding-top: 25px;
+        background-color: white;/*color of the side bar*/
+      }
+      /*aside navigation*/
+      aside > ul {
+        width: 200px;
+      }
+	  
+      aside > ul > li > a {
+        display: block;
+        color: white; /*font of the side bar*/
+        padding: 10px 0 10px 20px;
+      }
+      aside > ul > li > a.active {
+        background-color: gray;
+      }
+      /*hover over the side bar*/
+	  /* aside > ul > li > a:hover:not(.active) {
+        background-color: white;
+      }
+	  */
+     /* aside > h1 {
+        padding: 20px 0 20px 20px;
+        color: pink;
+      }
+	  */
+	   /*Section*/
+      section {
+       float: right;
+        margin-left: 200px;  /*aside width*/
+		 border: 25px solid gray; /*border of section color*/
+    padding: 25px;
+    margin-right: 0px;
+	margin-bottom: 60px; /*height of footer*/
+	margin-top: 0px;
+      }
+
+	  
+	  
+	  
+	  .button {
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: 12px 30px;
+  border-radius: 4px;
+  background-color: pink;
+  -webkit-transition: background-color 300ms ease;
+  transition: background-color 300ms ease;
+  color: black;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.button:hover {
+  background-color: blue;
+}
+
+.button.w--current {
+  background-color: #2e80b6;
+}
+
+.button.full-width {
+  display: block;
+  width: 100%;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.button.tab {
+  margin-right: 8px;
+  margin-left: 8px;
+  background-color: #92a0ad;
+}
+
+.button.tab:hover {
+  background-color: #2e80b6;
+}
+
+/* color of current tab*/
+/*
+.button.tab.w--current {
+  background-color: pink;
+}
+*/
+
+
+/*bubble profile pictures for the roles*/
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+.bubbleprofile {
+  font-family: 'Raleway', sans-serif;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  /*top and bottom margins are 20px right and left margins are 10px*/
+  margin: 20px 10px;
+  min-width: 50px;
+  max-width: 150px;
+  width: 100%;
+  color: #ffffff;
+  font-size: 11px;
+  text-align: center;
+  
+}
+.bubbleprofile * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.bubbleprofile:before {
+  position: absolute;
+  top: 5px;
+  bottom: 5px;
+  left: 5px;
+  right: 5px;
+  top: 100%;
+  content: '';
+  border-radius: 50%;
+  padding: 10px;
+  background-color: rgba(51, 51, 51, 0.9);
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  -webkit-transition-delay: 0.25s;
+  transition-delay: 0.25s;
+}
+.bubbleprofile img {
+  max-width: 100%;
+  backface-visibility: hidden;
+  vertical-align: top;
+  border-radius: 50%;
+  padding: 10px;
+}
+.bubbleprofile figcaption {
+  position: absolute;
+  top: 5px;
+  bottom: 5px;
+  left: 5px;
+  right: 5px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 50%;
+  
+}
+.bubbleprofile h3,
+.bubbleprofile h5 {
+  margin: 0;
+  opacity: 0;
+  letter-spacing: 1px;
+}
+.bubbleprofile h3 {
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  text-transform: uppercase;
+  font-weight: 400;
+  -webkit-transition-delay: 0.05s;
+  transition-delay: 0.05s;
+  margin-bottom: 5px;
+}
+.bubbleprofile h5 {
+  font-weight: normal;
+  background-color: #ae895d;
+  padding: 3px 10px;
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.bubbleprofile:hover:before,
+.bubbleprofile.hover:before {
+  top: 10px;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.bubbleprofile:hover h3,
+.bubbleprofile.hover h3,
+.bubbleprofile:hover h5,
+.bubbleprofile.hover h5 {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
+}
+.bubbleprofile:hover h3,
+.bubbleprofile.hover h3 {
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+.bubbleprofile:hover h5,
+.bubbleprofile.hover h5 {
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+/*END bubble profile pictures for the roles*/
+	  

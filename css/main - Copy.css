@@ -1,0 +1,332 @@
+/*  */
+
+
+/* style for the whole sheet */
+            *{
+                margin:0;
+                padding:0;
+				 box-sizing: border-box;
+            }
+			 html {
+        position: relative;
+        min-height: 100%;   /*footer bottom*/
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-size-adjus: 100%;  /*iphone font size*/
+      }
+			
+             body{
+                font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+                background:#fff url(../images/bg.png) no-repeat top left;
+				color: #58666e;
+            }
+			/*style for title of nav bubbles*/
+            .title{
+                width:548px;
+                height:119px;
+                position:absolute;
+                top:400px;
+                left:150px;
+                background:transparent url(../images/title.png) no-repeat top left;
+            }
+			            #content{
+                margin:0 auto;
+			
+            }
+			
+			/*Navigation bar*/
+      header {
+        /*for sticky header*/
+        position: fixed;
+        top: 0;
+  background-color: #f2f2f2;
+  color: #8a8c8f;
+        width: 100%;
+        height: 60px;
+        z-index: 2000;
+      
+        border-bottom: 1px solid #dee5e7;
+/*	  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(0, 0, 0, 0.05);
+  
+
+*/  }
+	  /* logo on left side */
+      .logo {
+        display: inline-block;
+        height: 36px;
+        margin: 12px 0 12px 25px;
+      }
+      .logo > img { height: 36px; }
+      nav {
+        float: right;
+      }
+
+	  #wrap {
+        /*
+        for full width
+        top = header height
+        bottom = footer height
+        */
+        width: 100%;
+        margin: 60px 0 60px;
+      }
+ li { list-style: none; }
+      a { text-decoration: none; }
+	  
+ /* main menu bar on top */
+      .nav-items {
+        margin-right: 20px;
+      }
+      .nav-items > li {
+        display: inline-block; 
+      }
+      .nav-items > li > a {
+        line-height: 60px; /*for Vertical Centering*/
+        padding: 0 30px;   /*nav item*/
+        color: #666666;
+      }
+      .nav-items > li > a:hover {
+        color: pink;
+      }
+
+      /*navigation icon for Tablet/Mobile Layout*/
+      .navicon {
+        cursor: pointer;
+        height: 60px;
+        padding: 28px 15px;
+        position: absolute;
+        top: 0; right: 0;
+
+        -webkit-user-select: none;  /* Chrome all / Safari all */
+        -moz-user-select: none;     /* Firefox all */
+        -ms-user-select: none;      /* IE 10+ */
+        user-select: none;          /* Likely future */
+      }
+      /*nav icon*/
+      .navicon-bar {
+        background-color: #333;
+        display: block;
+        position: relative;
+        /*navigation icon animation*/
+        transition: background-color .2s ease-out;
+        width: 20px;
+        height: 3px;
+      }
+      .navicon-bar::before,
+      .navicon-bar::after {
+        background-color: #333;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        /*navigation icon animation*/
+        transition: all .2s ease-out;
+        width: 100%;
+      }
+      .navicon-bar::before {
+        top: -7px;
+      }
+      .navicon-bar::after {
+        top: 7px;
+      }
+      /*toggle navigation icon*/
+      .nav-toggle:checked ~ .navicon > .navicon-bar {
+        background: transparent;
+      }
+      .nav-toggle:checked ~ .navicon > .navicon-bar::before {
+        transform: rotate(45deg);
+        top: 0;
+      }
+      .nav-toggle:checked ~ .navicon > .navicon-bar::after {
+        transform: rotate(-45deg);
+        top: 0;
+      }
+	  
+	  
+      .nav-toggle {
+        display: none;
+      }
+      .navicon {
+        display: none;
+      }
+
+	  
+	  
+	   /* for smartphone */
+      @media screen and (max-width: 480px) {
+        header {
+          height: 60px;
+        }
+        .nav-items {
+          display: none;
+        }
+        .navicon {
+          display: block;
+        }
+        #wrap {
+          margin-top: 60px;
+        }
+       
+        /*View navigation item*/
+        .nav-toggle:checked ~ .nav-items {
+          display: block;
+          width: 100%;
+          background-color: #fff;
+          box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(0, 0, 0, 0.05);
+        }
+        .nav-items > li  {
+          display: block;
+        }
+        .nav-items > li > a {
+          line-height: 50px;
+        }
+      }
+	  
+.navigation {
+  margin: 0px auto;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: 1.4px;
+}
+
+
+/* absolute positioning for the item */
+
+.navigation .item {
+  position: absolute;
+}
+
+
+/* define each navigation item */
+
+.creator {
+  top: 150px;
+  left: 360px;
+}
+
+.explorer {
+  top: 190px;
+  left: 625px;
+}
+
+.investor {
+  top: 370px;
+  left: 810px;
+}
+
+
+/*link elements of options when you scroll over */
+
+a.icon {
+  width: 52px;
+  height: 52px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  cursor: pointer;
+}
+
+
+/* define each icon of the respective element */
+
+.creator a.icon {
+  background: transparent url(../images/home.png) no-repeat 0px 0px;
+}
+
+.explorer a.icon {
+  background: transparent url(../images/shop.png) no-repeat 0px 0px;
+}
+
+.investor a.icon {
+  background: transparent url(../images/camera.png) no-repeat 0px 0px;
+}
+
+
+/* simply define the “hover” class */
+
+.navigation .item a.active {
+  background-position: 0px -52px;
+}
+
+
+/*circle image style */
+
+.item img.circle {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 52px;
+  height: 52px;
+  opacity: 0.1;
+}
+
+
+/* style for heading and the link list */
+
+.item h2 {
+  position: absolute;
+  width: 147px;
+  height: 52px;
+  color: #222;
+  font-size: 18px;
+  top: 0px;
+  left: 52px;
+  text-indent: 10px;
+  line-height: 52px;
+  text-shadow: 1px 1px 1px #fff;
+  text-transform: uppercase;
+}
+
+.item h2.active {
+  color: #fff;
+  text-shadow: 1px 0px 1px #555;
+}
+
+.item ul {
+  list-style: none;
+  position: absolute;
+  top: 60px;
+  left: 25px;
+  display: none;
+}
+
+.item ul li a {
+  font-size: 15px;
+  text-decoration: none;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #222;
+  padding: 3px;
+  float: left;
+  clear: both;
+  width: 100px;
+  text-shadow: 1px 1px 1px #fff;
+}
+
+.item ul li a:hover {
+  background-color: #fff;
+  color: #444;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 1px 1px 4px #666;
+  -webkit-box-shadow: 1px 1px 4px #666;
+  box-shadow: 1px 1px 4px #666;
+}
+
+
+
+/*footer*/
+      footer {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 60px;
+        width: 100%;
+        padding: 0 25px;
+        line-height: 60px;
+        color: #8a8c8f;
+        border-top: 1px solid #dee5e7;
+        background-color: #f2f2f2;
+      }
